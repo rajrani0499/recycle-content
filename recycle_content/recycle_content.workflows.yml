@@ -1,0 +1,14 @@
+recycle_content_entity:
+  id: recycle_content_entity
+  group: recycle_content
+  label: 'Recycle Content Entities'
+  states:
+    draft:
+      label: Draft
+    recycle:
+      label: Recycle
+  transitions:
+    delete:
+      label: 'Recycle'
+      from: [draft]
+      to: recycle

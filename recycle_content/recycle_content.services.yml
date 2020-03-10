@@ -1,0 +1,5 @@
+services:
+  recycle_content.route_subscriber:
+    class: Drupal\recycle_content\Routing\RecycleDeleteRouteSubscriber
+    tags:
+      - { name: event_subscriber }

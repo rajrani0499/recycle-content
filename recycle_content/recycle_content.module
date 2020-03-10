@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Removes field configs during uninstall.
+ */
+function recycle_content_uninstall() {
+  \Drupal::configFactory()->getEditable('field.field.node.article.field_recycle')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_recycle')->delete();
+  \Drupal::configFactory()->getEditable('views.view.recycle_content')->delete();
+}
